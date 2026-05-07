@@ -61,7 +61,7 @@ class moviesController extends Controller
                 ],
                 'data' => $movies->items(),
             ];
-            return ApiMessage::success('Success', $response, 200);
+            return ApiMessage::success('Successfully get data', $response, 200);
         } catch (\Exception $e) {
             return ApiMessage::error('Error', $e->getMessage(), 400);
         }
